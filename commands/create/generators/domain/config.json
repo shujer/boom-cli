@@ -1,0 +1,10 @@
+{
+  "apis": ["/miniClass/add"],
+  "input": {
+    "path": "./swaggerApi.json"
+  },
+  "output": {
+    "name": "domain",
+    "path": "./domain"
+  }
+}

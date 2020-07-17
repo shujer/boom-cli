@@ -1,0 +1,262 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "pyboss",
+    "version": "last",
+    "description": ""
+  },
+  "basePath": "/",
+  "tags": [],
+  "schemes": ["http"],
+  "paths": {
+    "/miniClass/add": {
+      "post": {
+        "tags": ["小班管理"],
+        "summary": "新增小班",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "name": "root",
+            "in": "body",
+            "description": "MiniClassAddVo :MiniClassAddVo",
+            "schema": {
+              "type": "object",
+              "required": [],
+              "title": "MiniClassAddVo",
+              "description": "MiniClassAddVo :MiniClassAddVo",
+              "properties": {
+                "year": {
+                  "type": "String",
+                  "description": "年份",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "semester": {
+                  "type": "String",
+                  "description": "学期",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "grade": {
+                  "type": "String",
+                  "description": "年级",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "subject": {
+                  "type": "String",
+                  "description": "科目",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+
+                "className": {
+                  "type": "String",
+                  "description": "班级名称",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "teacherNo": {
+                  "type": "String",
+                  "description": "老师编号",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "classroomNo": {
+                  "type": "String",
+                  "description": "教室编号",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+
+                "beginDate": {
+                  "type": "String",
+                  "description": "开课日期",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "startTime": {
+                  "type": "String",
+                  "description": "开始时间",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "organizationNo": {
+                  "type": "String",
+                  "description": "校区编号",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "courseList": {
+                  "type": "array",
+                  "description": "排课信息 ,CourseAddVo",
+                  "items": {
+                    "type": "object",
+                    "description": "排课信息 ,CourseAddVo",
+                    "properties": {
+                      "miniClassNo": {
+                        "type": "String",
+                        "description": "小班编号",
+                        "mock": {
+                          "mock": "@string"
+                        }
+                      },
+                      "courseNumber": {
+                        "type": "Integer",
+                        "description": "课程序号",
+                        "mock": {
+                          "mock": "@integer"
+                        }
+                      },
+                      "startTime": {
+                        "type": "Date",
+                        "description": "开始时间",
+                        "mock": {
+                          "mock": "@timestamp"
+                        }
+                      },
+                      "endTime": {
+                        "type": "Date",
+                        "description": "结束时间",
+                        "mock": {
+                          "mock": "@timestamp"
+                        }
+                      },
+                      "teacherNo": {
+                        "type": "String",
+                        "description": "老师编号",
+                        "mock": {
+                          "mock": "@string"
+                        }
+                      },
+                      "classroomNo": {
+                        "type": "String",
+                        "description": "教室编号",
+                        "mock": {
+                          "mock": "@string"
+                        }
+                      }
+                    },
+                    "required": []
+                  }
+                },
+                "branchNo": {
+                  "type": "String",
+                  "description": "传过来的分校编号",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "remark": {
+                  "type": "String",
+                  "description": "备注",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "title": "Response<List<ResponseData<MiniClassAddVo, String>>>",
+              "required": [],
+              "description": "Response<List<ResponseData<MiniClassAddVo, String>>> :Response",
+              "properties": {
+                "requestId": {
+                  "type": "String",
+                  "description": "必须　必请求id",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "msg": {
+                  "type": "String",
+                  "description": "必须　返回说明",
+                  "mock": {
+                    "mock": "@string"
+                  }
+                },
+                "code": {
+                  "type": "int",
+                  "description": "必须,不要用包装类，确保每个返回都有状态,成功代码：2000000,内部服务器错误：5000000,参数错误：4000001,如果有些特殊错误码需要解决，必须前端后协调好在接口文档有所体现",
+                  "mock": {
+                    "mock": "@integer"
+                  }
+                },
+                "data": {
+                  "type": "array",
+                  "description": "增删改-单条和批量操作时，类型必须是List<ResponseData<...>> ,ResponseData",
+                  "items": {
+                    "type": "object",
+                    "description": "增删改-单条和批量操作时，类型必须是List<ResponseData<...>> ,ResponseData",
+                    "properties": {
+                      "code": {
+                        "type": "int",
+                        "description": "执行结果的具体业务编码",
+                        "mock": {
+                          "mock": "@integer"
+                        }
+                      },
+                      "status": {
+                        "type": "boolean",
+                        "description": "表示操作成功或者失败",
+                        "mock": {
+                          "mock": "@boolean"
+                        }
+                      },
+                      "desc": {
+                        "type": "String",
+                        "description": "执行结果描述",
+                        "mock": {
+                          "mock": "@string"
+                        }
+                      },
+                      "req": {
+                        "type": "object",
+                        "description": "接收参数 ,Request",
+                        "properties": {},
+                        "required": []
+                      },
+                      "resp": {
+                        "type": "Response",
+                        "description": "返回结果,新增后的结果，可由开发决定是否返回 ,Response"
+                      },
+                      "error": {
+                        "type": "object",
+                        "description": "错误信息，有相关开发根据code定义 ,Object",
+                        "properties": {},
+                        "required": []
+                      }
+                    },
+                    "required": []
+                  }
+                },
+                "timestamp": {
+                  "type": "Long",
+                  "mock": {
+                    "mock": "@integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

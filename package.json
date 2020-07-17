@@ -1,0 +1,25 @@
+{
+  "name": "boom-cli",
+  "version": "1.0.0",
+  "description": "Boom CLI",
+  "bin": {
+    "boom-cli": "src/setup.js"
+  },
+  "scripts": {
+    "test": "sh ./task/test.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "commander": "^5.1.0",
+    "enquirer": "^2.3.6",
+    "lodash": "^4.17.19",
+    "std": "^0.1.40"
+  }
+}
