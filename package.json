@@ -10,8 +10,10 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
+    "colors": "^1.4.0",
     "commander": "^5.1.0",
     "enquirer": "^2.3.6",
+    "fs-extra": "^9.1.0",
     "lodash": "^4.17.19",
     "std": "^0.1.40"
   }

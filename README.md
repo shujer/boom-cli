@@ -1,7 +1,9 @@
-# What is Boom Cli
-
-# boom-cli build
-
-# boom-cli dev
-
-# boom-cli create domain
+# Install
+```bash
+$ yarn install
+$ npm link
+```
+# Usage
+```bash
+$ boom-cli create
+```
